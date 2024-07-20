@@ -9,8 +9,10 @@ import java.util.stream.Collectors;
 
 /**
  * PostgreSQL Repository for the Budget App
+ * @deprecated
  */
 @Repository
+@Deprecated
 public class LegacyBudgetRepository {
 
     private final String table = "budget_data";

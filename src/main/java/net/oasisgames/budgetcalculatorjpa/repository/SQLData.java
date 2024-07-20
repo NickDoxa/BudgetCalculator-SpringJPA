@@ -11,8 +11,10 @@ import java.util.Map;
  * Helpful class used to have easy access to data within a PostgreSQL database.
  *
  * @author Nick
+ * @deprecated
  */
 @Getter
+@Deprecated
 public class SQLData {
 
     /**
