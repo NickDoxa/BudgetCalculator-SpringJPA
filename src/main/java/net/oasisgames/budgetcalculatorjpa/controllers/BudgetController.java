@@ -5,6 +5,7 @@ import net.oasisgames.budgetcalculatorjpa.repository.BudgetRepository;
 import net.oasisgames.budgetcalculatorjpa.services.BudgetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -39,8 +40,8 @@ public class BudgetController {
      * @param user the users name
      * @return Budget information in JSON format
     */
-    @GetMapping("budget")
-    public BudgetInformation getBudgetData(String user) {
+    @GetMapping("budget/{user}")
+    public BudgetInformation getBudgetData(@PathVariable("user") String user) {
         return budgetRepository.findById(user).orElse(null);
     }
 
