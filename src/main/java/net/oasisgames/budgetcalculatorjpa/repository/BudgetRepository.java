@@ -8,11 +8,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Budget Repository class for the Budget Calculator App
+ */
 @Repository
 @Scope("singleton")
 public interface BudgetRepository extends JpaRepository<BudgetInformation, String> {
 
-    List<BudgetInformation> findAllByUsername(String userId);
     @Query("select username from BudgetInformation")
     List<String> findAllUsernames();
 }
