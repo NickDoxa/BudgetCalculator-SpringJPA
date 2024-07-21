@@ -3,7 +3,6 @@ package net.oasisgames.budgetcalculatorjpa.services;
 import lombok.Getter;
 import net.oasisgames.budgetcalculatorjpa.BudgetCalculatorJpaApplication;
 import net.oasisgames.budgetcalculatorjpa.components.BudgetInformation;
-import net.oasisgames.budgetcalculatorjpa.components.Calculate;
 import net.oasisgames.budgetcalculatorjpa.repository.BudgetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,12 +22,12 @@ public class BudgetService {
 
     /**
      * -- GETTER --
-     *  Gets the net.oasisgames.budgetcalculatorjpa.components.Calculate object
+     *  Gets the net.oasisgames.budgetcalculatorjpa.services.Calculate object
      */
     private Calculate calculate;
 
     /**
-     * Autowired net.oasisgames.budgetcalculatorjpa.components.Calculate object setter
+     * Autowired net.oasisgames.budgetcalculatorjpa.services.Calculate object setter
      * @param calculate calculate object
      */
     @Autowired
@@ -46,7 +45,7 @@ public class BudgetService {
     }
 
     /**
-     * net.oasisgames.budgetcalculatorjpa.components.Calculate a budget report for the user and save their information using the repository
+     * net.oasisgames.budgetcalculatorjpa.services.Calculate a budget report for the user and save their information using the repository
      * @param user the users name
      * @param income the users income
      * @param monthly the users monthly_expenses

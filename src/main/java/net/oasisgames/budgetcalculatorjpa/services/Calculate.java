@@ -1,15 +1,15 @@
-package net.oasisgames.budgetcalculatorjpa.components;
+package net.oasisgames.budgetcalculatorjpa.services;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 
 /**
- * Component for calculating basic information about the users budget
+ * Service for calculating basic information about the users budget
  */
-@Component
+@Service
 public class Calculate {
 
     /**
@@ -46,7 +46,7 @@ public class Calculate {
     }
 
     /**
-     * net.oasisgames.budgetcalculatorjpa.components.Calculate the tax percentage of the users income
+     * net.oasisgames.budgetcalculatorjpa.services.Calculate the tax percentage of the users income
      * @param income the users annual income
      * @return the total federal tax percent represented as a decimal double
      */
