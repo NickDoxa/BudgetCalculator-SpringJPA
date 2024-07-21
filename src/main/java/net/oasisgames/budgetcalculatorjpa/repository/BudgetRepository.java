@@ -15,6 +15,10 @@ import java.util.List;
 @Scope("singleton")
 public interface BudgetRepository extends JpaRepository<BudgetInformation, String> {
 
+    /**
+     * Finds all usernames currently in the data table
+     * @return String list of all usernames in the data table
+     */
     @Query("select username from BudgetInformation")
     List<String> findAllUsernames();
 }
